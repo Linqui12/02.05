@@ -1,5 +1,8 @@
-function checkNumber(userNumber,generateNumber,game){
-  if (userNumber>generateNumber) {
+function checkNumber(userNumber,generateNumber,game,count){
+  if(userNumber==generateNumber){
+    console.log ('You guessed the number');
+    return game = false;
+  } else if (userNumber>generateNumber) {
     console.log ('Your number more');
     return game = true;
   } else if (userNumber<generateNumber) {
@@ -7,8 +10,9 @@ function checkNumber(userNumber,generateNumber,game){
     
     return game = true;
   } else {
-    console.log ('You guessed the number');
-    return game = false;
+    count--;
+    console.log ('Your number wrong');
+    return game = true;
   } 
 }
 function guessTheNumber(userNumber){
@@ -16,15 +20,16 @@ function guessTheNumber(userNumber){
   const generateNumber=7;
   let count = 0;
   while(game){
-    game=checkNumber(userNumber,generateNumber,game);
+    game=checkNumber(userNumber,generateNumber,game,count);
     if(game===true){
       count++;
-      userNumber=Number(prompt('enter number') );
+      userNumber=Number(prompt('enter number :') );
     }
   }
   console.log ('You win ');
   console.log ('Attempts: '+count);
 }
+
 
 
 
