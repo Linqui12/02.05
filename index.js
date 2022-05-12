@@ -47,15 +47,36 @@ arr1=[3,4,1,2,7];
 console.log(arr1.sort());
 ///////////////////////////
 function hasElem(arr,str){
-  let temp=0;
-  for(arr.begin;i<arr.,i++;){
-    if(arr[i]===str) temp++;;
+  let pos=arr.indexOf(str)
+  if(pos!=-1){
+    return true;
   }
-  if (temp!==0) return true;
   else return false;
-}
+};
 let str='lalalend';
-let arr=[];
+let  arr=[str,];
+console.log(arr);
 arr.push(str);
+console.log(arr);
 console.log(hasElem(arr,str));
+arr.push('Vanila');
+console.log(arr);
+console.log(hasElem(arr,'re'));
 
+let nArr=[1,5,3,8,4,6];
+console.log(nArr);
+console.log(hasElem(nArr,5));
+
+nArr=[1,2,5,8,7,6,5,4,5,5]
+function thereAreTheSameNumbers(arr){
+   
+    for(let i = 1;i<arr.lenght;i++){
+      
+      if(arr[(i-1)]==arr[i]){
+        return true;
+      }
+     
+    }
+};
+let res=thereAreTheSameNumbers(nArr);
+console.log(res);
