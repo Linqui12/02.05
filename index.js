@@ -46,6 +46,7 @@ console.log(arr1);
 arr1=[3,4,1,2,7];
 console.log(arr1.sort());
 ///////////////////////////
+//Необходимо создать функцию hasElem, которая параметрами будет принимать массив и строку, и возвращать true, если строка есть в массиве, и false - если нет
 function hasElem(arr,str){
   let pos=arr.indexOf(str)
   if(pos!=-1){
@@ -63,10 +64,13 @@ arr.push('Vanila');
 console.log(arr);
 console.log(hasElem(arr,'re'));
 /////////////////////////////////
+//Необходимо создать функцию hasElem, которая параметрами будет принимать массив и строку, и возвращать true, если строка есть в массиве, и false - если нет
 let nArr=[1,5,3,8,4,6];
 console.log(nArr);
 console.log(hasElem(nArr,5));
 //////////////////////////////////////////////////
+//Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть -  вернуть true[2,2,1], а если нет - вернуть false[1,2,1]
+
 nArr=[1,2,5,8,7,6,5,4,5,5];
 console.log(nArr);
 function thereAreTheSameNumbers(arr){
@@ -77,7 +81,7 @@ function thereAreTheSameNumbers(arr){
         }
       }
     if(temp!==0){
-      return true,[1,2,2];
+      return true,[1,2,2];///вот тут у меня вопрос
     }
     else{
       return false,[1,2,1];
@@ -86,6 +90,7 @@ function thereAreTheSameNumbers(arr){
 let result=thereAreTheSameNumbers(nArr);
 console.log(result);
 ////////////////////////////////////////////////
+//Функция, которая возвращает массив заполненный 10 случайными числами в интервале от 5 до 33. Math.random()
 function getRandom(min,max){
   return Math.round(Math.random()*(max-min)+min);
 };
@@ -99,6 +104,8 @@ function fillArrayTen(min,max){
 let array=fillArrayTen(5,33);
 console.log(array);
 /////////////////////////////////////////////////////////
+//Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
+
 function avarage(arr){
   let temp=0;
   for(let i = 0;i<arr.length;i++){
