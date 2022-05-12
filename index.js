@@ -1,74 +1,61 @@
-//12.05.22
-// const toString = function(){
-//   return `${this.name} ${this.sname}`
-// }
-// const man={
-//   countFingers:5,
-//   read:function(){
-//     return this.name + ' is reading';
-//   }
-// }
-// const student={
-//   id:1,
-//   name: 'Elon',
-//   sname: 'Musk',
-//   age:50,
-//   toString,
-// };
-// student.__proto__=man;//наследование sudent  от man!!!!
-// console.log(student);
-// console.log(student.read());
-// const rabbit={
-  
-//   countPaw : 4,
-//   toJump:function(){
-//     return ' i`M jumping';
-//   }
-// };
-// const rabbitPet={
-//   name:'Dilan',
-//   isPet:function(){
-//     return 'Pet: ' + this.name;
-//   }
-// };
-// const rabbitMagic={
-//   name:'Mike',
-//   ToSay:function(word){
-//     return   this.name + ' say : '+ word;
-//   }
-// };
-// rabbitPet.__proto__= rabbit;
-// rabbitMagic.__proto__=rabbitPet;
-// console.log(rabbitMagic.ToSay('bla'));
+//concat
+let arr1=[1,2,3];
+let arr2=[4,5,6];
+let arr3=arr1.concat(arr2);
+console.log(arr3);
+//reverse
+console.log(arr1.reverse());
+console.log(arr1.reverse());
+ //push,unshit
+arr1.push(4,5,6);
+arr1.unshift(4,5,6);
+console.log(arr1);
+//shift,pop
+arr1=['js','css','htlm'];
+console.log(arr1.shift(0));
+console.log(arr1);
 
-// function Ladder(){
-//   this.step=0
-// };
-// function LadderPrototype(){
-//   this.show= function(){
-//     return this.step;
-//   } 
-//   this.up=function(){
-//     this.step++;
-//     return this;
-//   };
-//   this.down=function(){
-//      this.step--;
-//      return this;
-//   };
-// };
-// Ladder.prototype=new LadderPrototype();
+console.log(arr1.pop());
+console.log(arr1);
+//slice
+arr1 = [1,2,3,4,5];
+arr2=arr1.slice(0,3);
+console.log(arr2);
 
-// const ladder=new Ladder();
-// console.log(ladder.up());
-// console.log(ladder.show());
-// console.log(ladder.up());
-// console.log(ladder.show());
-// console.log(ladder.down());
-// console.log(ladder.show());
-// console.log(ladder.up().up().up().up().up());
-// console.log(ladder.down().down().up().up().up().show());
-// const a=Math.random();
-// console.log(a);    ------- математический рандом( 0- 10 )
-// console.log(a*10);
+arr2=arr1.slice(3,5);
+console.log(arr2);
+//splice
+arr1 = [1,2,3,4,5];
+arr1.splice(1,2);
+console.log(arr1);
+
+arr1 = [1,2,3,4,5];
+arr2=arr1.splice(1,3);
+console.log(arr2);
+
+arr1 = [1,2,3,4,5];
+arr1.splice(3,0,'a','b','c');
+console.log(arr1);
+
+arr1 = [1,2,3,4,5];
+arr1.splice(1,0,'a','b');
+arr1.splice(6,0,'c');
+arr1.splice(8,0,'e');
+console.log(arr1);
+//sort
+arr1=[3,4,1,2,7];
+console.log(arr1.sort());
+///////////////////////////
+function hasElem(arr,str){
+  let temp=0;
+  for(arr.begin;i<arr.,i++;){
+    if(arr[i]===str) temp++;;
+  }
+  if (temp!==0) return true;
+  else return false;
+}
+let str='lalalend';
+let arr=[];
+arr.push(str);
+console.log(hasElem(arr,str));
 
