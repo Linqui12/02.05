@@ -62,28 +62,58 @@ console.log(hasElem(arr,str));
 arr.push('Vanila');
 console.log(arr);
 console.log(hasElem(arr,'re'));
+/////////////////////////////////
 let nArr=[1,5,3,8,4,6];
 console.log(nArr);
 console.log(hasElem(nArr,5));
-///////////////////////////////
+//////////////////////////////////////////////////
 nArr=[1,2,5,8,7,6,5,4,5,2,5];
+console.log(nArr);
 function thereAreTheSameNumbers(arr){
-   let temp=0;
+   let tempo=0;
     for(let i = 0;i<arr.length;i++){
       for(let j=i+1;j< arr.length;i++){
         if(arr[i]===arr[j]){
-          temp++;
+          tempo++;
         }
       }
       
      
     }
-    if(temp!==0){
+    if(tempo!=0){
       return true;
     }
     else{
       return false;
     }
 };
-let res=thereAreTheSameNumbers(nArr);
+let result=thereAreTheSameNumbers(nArr);
+console.log(resuult);
+////////////////////////////////////////////////
+function getRandom(min,max){
+  return Math.round(Math.random()*(max-min)+min);
+};
+function fillArrayTen(min,max){
+  let temp=[];
+  for(let i=0;i<10;i++){
+    temp.push(getRandom(min,max));
+  }
+  return temp;
+};
+
+let array=fillArrayTen(5,33);
+console.log(array);//
+/////////////////////////////////////////////////////////
+function avarage(arr){
+  let temp=0;
+  for(let i = 0;i<arr.length;i++){
+    temp+=arr[i];
+  }
+  console.log(temp);
+  return temp/arr.length;
+
+}
+arr1=[12,15,20,25,59,79];
+let res=avarage(arr1);
 console.log(res);
+////////////////////////////////////////////////
