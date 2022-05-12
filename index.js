@@ -67,28 +67,28 @@ let nArr=[1,5,3,8,4,6];
 console.log(nArr);
 console.log(hasElem(nArr,5));
 //////////////////////////////////////////////////
-nArr=[1,2,5,8,7,6,5,4,5,2,5];
-console.log(nArr);
-function thereAreTheSameNumbers(arr){
-   let tempo=0;
-    for(let i = 0;i<arr.length;i++){
-      for(let j=i+1;j< arr.length;i++){
-        if(arr[i]===arr[j]){
-          tempo++;
-        }
-      }
+// nArr=[1,2,5,8,7,6,5,4,5,2,5];
+// console.log(nArr);
+// function thereAreTheSameNumbers(arr){
+//    let tempo=0;
+//     for(let i = 0;i<arr.length;i++){
+//       for(let j=i+1;j< arr.length;i++){
+//         if(arr[i]===arr[j]){
+//           tempo++;
+//         }
+//       }
       
      
-    }
-    if(tempo!=0){
-      return true;
-    }
-    else{
-      return false;
-    }
-};
-let result=thereAreTheSameNumbers(nArr);
-console.log(resuult);
+//     }
+//     if(tempo!=0){
+//       return true;
+//     }
+//     else{
+//       return false;
+//     }
+// };
+// let result=thereAreTheSameNumbers(nArr);
+// console.log(resuult);
 ////////////////////////////////////////////////
 function getRandom(min,max){
   return Math.round(Math.random()*(max-min)+min);
