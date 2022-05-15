@@ -50,9 +50,9 @@ console.log(arr1.sort());
 function hasElem(arr,str){
   let pos=arr.indexOf(str)
   if(pos!=-1){
-    return true;
+    return true;//переделал
   }
-  else return false;
+  
 };
 let str='lalalend';
 let  arr=[str,];
@@ -74,18 +74,18 @@ console.log(hasElem(nArr,5));
 nArr=[1,2,5,8,7,6,5,4,5,5];
 console.log(nArr);
 function thereAreTheSameNumbers(arr){
-   let temp=0; 
+   let temp=[]; 
       for(let i=1;i< arr.length;i++){
         if(arr[i]===arr[i-1]){
-          temp++;
+          if(temp!==0){
+            return temp= [1,2,2];//переделал
+          }
+          else{
+            return temp=[1,2,1];
+          }
         }
       }
-    if(temp!==0){
-      return true,[1,2,2];///вот тут у меня вопрос
-    }
-    else{
-      return false,[1,2,1];
-    }
+    
 };
 let result=thereAreTheSameNumbers(nArr);
 console.log(result);
