@@ -48,11 +48,15 @@ console.log(arr1.sort());
 ///////////////////////////
 //Необходимо создать функцию hasElem, которая параметрами будет принимать массив и строку, и возвращать true, если строка есть в массиве, и false - если нет
 function hasElem(arr,str){
+  if(arr.length===0){
+    return false;
+  }
+  else{
   let pos=arr.indexOf(str)
   if(pos!=-1){
     return true;//переделал
   }
-  
+}
 };
 let str='lalalend';
 let  arr=[str,];
@@ -74,7 +78,12 @@ console.log(hasElem(nArr,5));
 nArr=[1,2,5,8,7,6,5,4,5,5];
 console.log(nArr);
 function thereAreTheSameNumbers(arr){
-   let temp=[]; 
+  let temp=[];
+  if(arr.length===0){
+    return temp=[1,2,1];
+  }
+  else{
+    
       for(let i=1;i< arr.length;i++){
         if(arr[i]===arr[i-1]){
           if(temp!==0){
@@ -85,7 +94,7 @@ function thereAreTheSameNumbers(arr){
           }
         }
       }
-    
+  }
 };
 let result=thereAreTheSameNumbers(nArr);
 console.log(result);
