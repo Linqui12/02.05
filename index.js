@@ -29,7 +29,7 @@ arr1.splice(6,0,'c');
 arr1.splice(8,0,'e');
 //sort
 arr1=[3,4,1,2,7];
-console.log(arr1.sort());
+arr1.sort();
 //Необходимо создать функцию hasElem, которая параметрами будет принимать массив и строку, и возвращать true, если строка есть в массиве, и false - если нет
 function hasElem(arr,str){
   if(arr.length===0)return false;
@@ -52,28 +52,11 @@ let nArr=[1,5,3,8,4,6];
 console.log(nArr);
 console.log(hasElem(nArr,5));
 //Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть -  вернуть true[2,2,1], а если нет - вернуть false[1,2,1]
-nArr=[1,2,5,8,7,6,5,4,5,5];
-console.log(nArr);
+arr=[1,2,5,8,7,6,5,4,5,5];
 function thereAreTheSameNumbers(arr){
-  let temp=[];
-  if(arr.length===0){
-    return temp=[1,2,1];
-  }
-  else{
-    
-      for(let i=1;i< arr.length;i++){
-        if(arr[i]===arr[i-1]){
-          if(temp!==0){
-            return temp= [1,2,2];//переделал
-          }
-          else{
-            return temp=[1,2,1];
-          }
-        }
-      }
-  }
+  return arr.some((element,index,arr)=>index!==0&&element===arr[index-1]);
 };
-let result=thereAreTheSameNumbers(nArr);
+let result=thereAreTheSameNumbers(arr);
 console.log(result);
 //Функция, которая возвращает массив заполненный 10 случайными числами в интервале от 5 до 33. Math.random()
 function getRandom(min,max){
@@ -91,11 +74,8 @@ console.log(array);
 //Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
 
 function avarage(arr){
-  let temp=0;
-  for(let i = 0;i<arr.length;i++){
-    temp+=arr[i];
-  }
-  return temp/arr.length;
+  if(arr.leagth==0)return 0;
+  return arr.reduce((accumulator, current) => accumulator + current) / arr.length;
 }
 arr1=[12,15,20,25,59,79];
 let res=avarage(arr1);
