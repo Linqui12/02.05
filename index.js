@@ -74,7 +74,7 @@
 // //Дан массив arr. Найдите среднее арифметическое его элементов. Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
 
 // function avarage(arr){
-//   if(arr.leagth==0)return 0;
+//   if(arr.length==0)return 0;
 //   return arr.reduce((accumulator, current) => accumulator + current) / arr.length;
 // }
 // arr1=[12,15,20,25,59,79];
@@ -112,9 +112,7 @@ function pairBrackets(numb){
   if(numb<=1){
     return '()'
   }
-  else{
     return '('+pairBrackets(numb-1)+')';
-  }
 };
 
 console.log(pairBrackets(5));
@@ -125,6 +123,12 @@ function minMax(numbs){
 const arr=[5,4,8,3,12,55,-2,1];
 console.log(minMax(arr));
 //напишите функцию-стрелку, которая принимает неограниченное количество аргументов и возвращает их произведение.
-
-let arrow=(numb1,...numbN)=>numb1+numbN.reduce(numbN[0], numbN[numbN.lenght], 0);
-console.log(arrow(1,2,3,4,5));
+function sumArr(array,length){
+  if(length<=0)
+  {
+    return array[length];
+  }
+  return array[length]+sumArr(array,length-1);
+}
+let arrow=(numb1,numb2,...numbN)=>numb1+numb2+sumArr(numbN,numbN.length-1);
+console.log(arrow(1,2,3,4,5,6));
