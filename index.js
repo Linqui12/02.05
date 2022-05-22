@@ -123,12 +123,6 @@ function minMax(numbs){
 const arr=[5,4,8,3,12,55,-2,1];
 console.log(minMax(arr));
 //напишите функцию-стрелку, которая принимает неограниченное количество аргументов и возвращает их произведение.
-function sumArr(array,length){
-  if(length<=0)
-  {
-    return array[length];
-  }
-  return array[length]+sumArr(array,length-1);
-}
-let arrow=(numb1,numb2,...numbN)=>numb1+numb2+sumArr(numbN,numbN.length-1);
+
+let arrow=(numb1,numb2,...numbN)=>numb1*numb2*numbN.reduce((sum, current) => sum * current);
 console.log(arrow(1,2,3,4,5,6));
